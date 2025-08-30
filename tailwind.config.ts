@@ -24,10 +24,13 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				maroon: 'hsl(var(--clr-maroon))',
+				blue: 'hsl(var(--clr-blue))',
+				brown: 'hsl(var(--clr-brown))',
+				cream: 'hsl(var(--clr-cream))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))',
-					glow: 'hsl(var(--primary-glow))'
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -67,10 +70,12 @@ export default {
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-card': 'var(--gradient-card)',
+				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-glow': 'var(--gradient-glow)'
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
+				'maroon': 'var(--shadow-maroon)',
 				'card': 'var(--shadow-card)'
 			},
 			borderRadius: {

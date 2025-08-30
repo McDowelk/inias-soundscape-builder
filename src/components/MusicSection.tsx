@@ -28,43 +28,43 @@ const MusicSection = () => {
     <section className="py-24 px-6 bg-gradient-to-b from-background to-card/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-6">
+          <h2 className="text-5xl md:text-6xl font-black bg-gradient-hero bg-clip-text text-transparent mb-8 tracking-tight">
             Latest Releases
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
             Explore the sonic journey through carefully crafted electronic compositions
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {releases.map((release, index) => (
-            <Card key={index} className="bg-gradient-card border-primary/20 shadow-card hover:shadow-glow transition-smooth group">
+            <Card key={index} className="bg-gradient-card border-blue/30 shadow-card hover:shadow-glow transition-smooth group">
               <CardContent className="p-8">
                 {/* Album Art Placeholder */}
-                <div className="w-full aspect-square bg-gradient-hero rounded-lg mb-6 flex items-center justify-center group-hover:shadow-glow transition-smooth">
-                  <Play className="h-16 w-16 text-primary-foreground opacity-80 group-hover:opacity-100 transition-smooth" />
+                <div className="w-full aspect-square bg-gradient-accent rounded-xl mb-8 flex items-center justify-center group-hover:shadow-maroon transition-smooth">
+                  <Play className="h-20 w-20 text-cream opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-smooth" />
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">{release.title}</h3>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="px-2 py-1 bg-primary/20 rounded text-primary">{release.type}</span>
-                      <span>{release.year}</span>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">{release.title}</h3>
+                    <div className="flex items-center gap-3 text-sm">
+                      <span className="px-3 py-1 bg-maroon/20 border border-maroon/30 rounded-full text-maroon font-medium">{release.type}</span>
+                      <span className="text-muted-foreground">{release.year}</span>
                     </div>
                   </div>
 
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-lg leading-relaxed">
                     {release.description}
                   </p>
 
-                  <div className="flex gap-2 pt-4">
+                  <div className="flex gap-3 pt-4">
                     <Button size="sm" className="bg-gradient-hero hover:shadow-glow transition-smooth">
-                      <Play className="mr-2 h-4 w-4" />
+                      <Play className="mr-2 h-5 w-5" />
                       Play
                     </Button>
-                    <Button variant="outline" size="sm" className="border-primary/30 hover:bg-primary/10 transition-smooth">
-                      <ExternalLink className="mr-2 h-4 w-4" />
+                    <Button variant="outline" size="sm" className="border-blue/60 text-blue hover:bg-blue/10 transition-smooth">
+                      <ExternalLink className="mr-2 h-5 w-5" />
                       Stream
                     </Button>
                   </div>
@@ -74,8 +74,8 @@ const MusicSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10 transition-smooth">
+        <div className="text-center mt-16">
+          <Button size="lg" variant="outline" className="border-blue/60 text-blue hover:bg-blue/10 transition-smooth text-lg px-8 py-4">
             View Full Discography
           </Button>
         </div>

@@ -8,49 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 27% 8%;
-    --foreground: 210 40% 98%;
+    /* House Style Colors */
+    --clr-maroon: 0 100% 23%;     /* #760000 */
+    --clr-blue: 208 85% 70%;      /* #73AFF3 */
+    --clr-brown: 30 38% 12%;      /* #281812 */
+    --clr-cream: 40 25% 92%;      /* Cream complement */
+    --clr-dark-brown: 30 38% 8%;  /* Darker brown */
 
-    --card: 224 27% 12%;
-    --card-foreground: 210 40% 98%;
+    --background: var(--clr-brown);
+    --foreground: var(--clr-cream);
 
-    --popover: 224 27% 12%;
-    --popover-foreground: 210 40% 98%;
+    --card: var(--clr-dark-brown);
+    --card-foreground: var(--clr-cream);
 
-    --primary: 263 85% 65%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 270 91% 75%;
+    --popover: var(--clr-dark-brown);
+    --popover-foreground: var(--clr-cream);
 
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --primary: var(--clr-maroon);
+    --primary-foreground: var(--clr-cream);
 
-    --muted: 217 32% 17%;
-    --muted-foreground: 215 20% 65%;
+    --secondary: var(--clr-blue);
+    --secondary-foreground: var(--clr-brown);
 
-    --accent: 310 85% 60%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 30 38% 15%;
+    --muted-foreground: 40 15% 65%;
 
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: var(--clr-blue);
+    --accent-foreground: var(--clr-brown);
 
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 263 85% 65%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--clr-cream);
+
+    --border: 30 38% 18%;
+    --input: 30 38% 15%;
+    --ring: var(--clr-maroon);
 
     --radius: 0.75rem;
 
-    /* Music-themed gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(217 32% 15%) 100%);
-    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(var(--primary-glow) / 0.3) 0%, transparent 70%);
+    /* Brand gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--clr-maroon)) 0%, hsl(var(--clr-blue)) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(var(--clr-dark-brown)) 0%, hsl(var(--clr-brown)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--clr-blue)) 0%, hsl(var(--clr-maroon)) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(var(--clr-blue) / 0.2) 0%, transparent 70%);
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
-    --shadow-card: 0 8px 32px hsl(220 27% 4% / 0.5);
+    --shadow-glow: 0 0 40px hsl(var(--clr-blue) / 0.3);
+    --shadow-maroon: 0 0 30px hsl(var(--clr-maroon) / 0.4);
+    --shadow-card: 0 8px 32px hsl(var(--clr-dark-brown) / 0.8);
     
     /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --animation-float: float 6s ease-in-out infinite;
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-float: float 8s ease-in-out infinite;
 
     --sidebar-background: 0 0% 98%;
 
@@ -133,12 +141,20 @@ All colors MUST be HSL.
     background: var(--gradient-card);
   }
   
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
   .gradient-glow {
     background: var(--gradient-glow);
   }
   
   .shadow-glow {
     box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-maroon {
+    box-shadow: var(--shadow-maroon);
   }
   
   .shadow-card {
@@ -151,5 +167,21 @@ All colors MUST be HSL.
   
   .transition-smooth {
     transition: var(--transition-smooth);
+  }
+  
+  .text-maroon {
+    color: hsl(var(--clr-maroon));
+  }
+  
+  .text-blue {
+    color: hsl(var(--clr-blue));
+  }
+  
+  .bg-maroon {
+    background-color: hsl(var(--clr-maroon));
+  }
+  
+  .bg-blue {
+    background-color: hsl(var(--clr-blue));
   }
 }
